@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="website_province_form_inherit" name="Website Province Form" inherit_id="website.backend_create_website_form">
+        <xpath expr="//div[@name='backend_website_creation_fields']" position="before">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Province</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="province">
+                        <option value="jesi">Jesi</option>
+                        <option value="taranto">Taranto</option>
+                        <option value="pescara">Pescara</option>
+                        <option value="pesaro">Pesaro</option>
+                    </select>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="website_grazie_template_inherit" name="Website Grazie Template" inherit_id="website.layout">
+        <xpath expr="//main" position="inside">
+            <h1>Grazie!</h1>
+        </xpath>
+    </template>
+
+    <template id="website_homepage_template_inherit" name="Website Homepage Template" inherit_id="website.layout">
+        <xpath expr="//main" position="inside">
+            <h1>Benvenuto sul nostro sito</h1>
+            <p>Template temporaneo</p>
+        </xpath>
+    </template>
+</odoo>
