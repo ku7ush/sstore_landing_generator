@@ -1,3 +1,3 @@
-# sstore_landing_generator/controllers/__init__.py
+# sstore_landing_generator/__init__.py
 
-from . import main
+from . import routes

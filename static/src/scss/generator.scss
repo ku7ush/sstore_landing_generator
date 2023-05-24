@@ -1,0 +1,15 @@
+#wrapwrap {
+    header:first-child {
+        display: none;
+    }
+
+    header.o_header_affix {
+        display: none;
+    }
+}
+
+#wrapwrap {
+    #footer {
+        display: none;
+    }
+}

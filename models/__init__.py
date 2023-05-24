@@ -1,3 +1,3 @@
-# sstore_landing_generator/models/__init__.py
+# sstore_landing_generator/__init__.py
 
-from . import website
+from . import models

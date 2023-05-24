@@ -1,31 +1,658 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <template id="website_province_form_inherit" name="Website Province Form" inherit_id="website.backend_create_website_form">
-        <xpath expr="//div[@name='backend_website_creation_fields']" position="before">
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Province</label>
-                <div class="col-sm-9">
-                    <select class="form-control" name="province">
-                        <option value="jesi">Jesi</option>
-                        <option value="taranto">Taranto</option>
-                        <option value="pescara">Pescara</option>
-                        <option value="pesaro">Pesaro</option>
-                    </select>
+    <template id="website_grazie_template" name="Thank You Page">
+        <xpath expr="//main" position="inside">
+            <t t-call="website.layout">
+                <t t-set="title">Scavolini Store - <span style="text-transform:capitalize;" t-field="website.province" /></t>
+                <div id="wrap" class="oe_structure oe_empty">
+                    <section class="s_cover parallax s_parallax_no_overflow_hidden bg-black-75 s_parallax_is_fixed pb160 pt88" data-scroll-background-ratio="1" style="background-image: none;">
+                        <span class="oe_img_bg s_parallax_bg oe_custom_bg" style="background-image: url(&quot;/web/image/7932/14239_Scavolini---Insieme-siamo-Casa---frame_1_vers2.jpg&quot;); background-size: cover; background-position: 50% 0px;">
+                        <br/>
+                        </span>
+                        <div class="container">
+                        <div class="row s_nb_column_fixed">
+                            <div class="col-lg-12 s_title pt0" data-name="Title" style="">
+                            <h1 style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: inherit; font-stretch: inherit; font-size: 5rem; line-height: 1.1em; font-family: Roboto, sans-serif; vertical-align: baseline; min-height: 1.1em; color: rgb(0, 0, 0); text-align: center;"><span class="text-shade-0-4" style="font-family: inherit; font-weight: inherit; border: 0px; color: rgb(25, 2, 2); font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"/><span class="text-shade-0-4" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(25, 2, 2); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Lo&amp;nbsp;</span><span class="text-tint-0-1" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(200, 42, 43); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">SCAVOLINI&amp;nbsp;</span><span class="text-shade-0-4" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(25, 2, 2); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Store</span>&amp;nbsp;&amp;nbsp;<span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><font style="background-color: rgb(255, 255, 255); font-size: 62px;">&amp;nbsp;più grande delle Marche, a <span style="text-transform:capitalize;" t-field="website.province" />.</font></span></h1>
+                            </div>
+                            <div class="col-lg-12 s_text pt16 pb0" data-name="Text">
+                            <p class="lead" style="text-align: center;">
+                                <span style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 1.4em; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Le migliori&amp;nbsp;</span>
+                                <span class="text-tint-0-1" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(200, 42, 43); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 1.4em; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">CUCINE, BAGNI e LIVING.</span>
+                                <br/>
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <section class="s_text_block pt32 pb32 bg-200 oe_custom_bg">
+                        <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 pt32 pb0">
+                            <p>
+                                <b>
+                                <font style="color: rgb(169, 11, 12); font-size: 24px;">Grazie per aver compilato il form.</font>
+                                </b>
+                            </p>
+                            <p>
+                                <b>
+                                <font style="color: rgb(169, 11, 12); font-size: 24px;">Ti contatteremo per incontrarci nello showroom Scavolini più grande delle Marche.</font>
+                                </b>
+                                <span style="font-weight: bolder;">
+                                <font style="font-size: 18px;">&amp;nbsp;</font>
+                                </span>
+                                <b>
+                                <br/>
+                                </b>
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <section class="s_text_image pt32 pb32">
+                        <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pt16 pb16">
+                            <img class="img-fluid o_we_custom_image" src="/web/image/7936/108_z_anconaok.jpg"/>
+                            </div>
+                            <div class="col-lg-6 pt16 pb16">
+                            <h4>Orari di Apertura</h4>
+                            <p>da Lunedì a Sabato<br/>Mattina: 9.00 - 13.00<br/>Pomeriggio: 15.30 - 19.30</p>
+                            <p>Domenica:<br/>Chiuso</p>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <section class="s_text_image pt32 pb32">
+                        <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 pt16 pb16">
+                            <h4>
+                                <font style="color: rgb(192, 13, 14);">Dove Siamo</font>
+                            </h4>
+                            <h6>Via ..., ...</h6>
+                            <h6><span style="text-transform:capitalize;" t-field="website.province" /> &amp;nbsp;<br/><br/></h6>
+                            <h6>E-mail: info@<t t-raw="website.province" />.scavolinistore.net<br/><br/></h6>
+                            <h6>Telefono: 071-9880292</h6>
+                            <h6>Se chiami Comunica telefonicamente il CODICE:&amp;nbsp; &amp;nbsp;<font style="color: rgb(192, 13, 14);">SCV1598</font></h6>
+                            <h6>Per avere diritto ad uno sconto extra del 5%.</h6>
+                            </div>
+                            <div class="col-lg-6 pt16 pb16">
+                            
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <section class="s_text_image pt32 pb32 bg-200 oe_custom_bg">
+                        <div class="container">
+                        <div class="row align-items-center">
+                            <div class="pt16 pb16 col-lg-2">
+                            <img class="img-fluid o_we_custom_image" src="/web/image/7938/LOGO-SCAVOLINI-STORE-ANCONA---RETTANGOLARE%20(1).jpg"/>
+                            </div>
+                            <div class="pt16 pb16 col-lg-8">
+                            <h2>
+                                <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">P.IVA: 11230860964 -&amp;nbsp; &amp;nbsp; E-mail:</span>
+                                <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">&amp;nbsp;info@ancona.scavolinistore.net&amp;nbsp; &amp;nbsp; Telefono: 071-9880292</span>
+                                <br/>
+                            </h2>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
+            </t>
         </xpath>
     </template>
 
-    <template id="website_grazie_template_inherit" name="Website Grazie Template" inherit_id="website.layout">
-        <xpath expr="//main" position="inside">
-            <h1>Grazie!</h1>
-        </xpath>
-    </template>
-
-    <template id="website_homepage_template_inherit" name="Website Homepage Template" inherit_id="website.layout">
-        <xpath expr="//main" position="inside">
-            <h1>Benvenuto sul nostro sito</h1>
-            <p>Template temporaneo</p>
+    <template id="website_homepage_template_inherit" name="Website Homepage Template" inherit_id="website.homepage">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_cover parallax s_parallax_no_overflow_hidden pt24 pb24 bg-black-75 s_parallax_is_fixed" data-scroll-background-ratio="1" style="background-image: none;">
+                    <span class="oe_img_bg s_parallax_bg oe_custom_bg" style="background-image: url(&quot;/web/image/7932/14239_Scavolini---Insieme-siamo-Casa---frame_1_vers2.jpg&quot;); background-size: cover; background-position: 50% 0px;">
+                    <br/>
+                    </span>
+                    <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="s_text pb0 col-lg-4 offset-lg-4 pt0" data-name="Text">
+                        <p class="lead" style="text-align: center;">
+                            <img class="img-fluid o_we_custom_image" src="/web/image/7938/LOGO-SCAVOLINI-STORE-ANCONA---RETTANGOLARE%20(1).jpg" data-original-title="" title="" aria-describedby="tooltip326068"/>
+                            <br/>
+                        </p>
+                        </div>
+                        <div class="col-lg-12 s_title pb40 pt32" data-name="Title" style="">
+                        <h1 style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: inherit; font-stretch: inherit; font-size: 5rem; line-height: 1.1em; font-family: Roboto, sans-serif; vertical-align: baseline; min-height: 1.1em; color: rgb(0, 0, 0); text-align: center;">
+                            <span class="text-shade-0-4" style="font-family: inherit; font-weight: inherit; border: 0px; color: rgb(25, 2, 2); font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"/>
+                            <span class="text-shade-0-4" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(25, 2, 2); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Lo</span>
+                            <span class="text-tint-0-1" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(200, 42, 43); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">SCAVOLINI&amp;nbsp; </span>
+                            <span class="text-shade-0-4" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(25, 2, 2); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Store</span>
+                            <span class="text-shade-0-4" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(25, 2, 2); font-family: inherit; font-size: 62px; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; letter-spacing: 0em; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"> </span>
+                            <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">
+                            <font style="background-color: rgb(255, 255, 255); font-size: 62px;">&amp;nbsp;più grande delle ..., a <span style="text-transform:capitalize;" t-field="website.province" />.</font>
+                            <font style="background-color: rgb(255, 255, 255); font-size: 62px;"> </font>
+                            </span>
+                        </h1>
+                        </div>
+                        <div class="col-lg-12 s_text pt16 pb0" data-name="Text">
+                        <p class="lead" style="text-align: center;">
+                            <span style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 1.4em; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Scopri le migliori&amp;nbsp;</span>
+                            <span class="text-tint-0-1" style="background-color: rgb(255, 255, 255); border: 0px; color: rgb(200, 42, 43); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 1.4em; font-stretch: inherit; font-variant-east-asian: inherit; font-variant-numeric: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">CUCINE, BAGNI e LIVING.</span>
+                            <br/>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_text_image pt32 bg-200 oe_custom_bg pb0">
+                    <div class="container">
+                    <div class="row align-items-center">
+                        <div class="pt16 col-lg-12 pb0" style="">
+                        <h4 style="text-align: center; ">
+                            <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Pensavi che una cucina&amp;nbsp;</span>
+                            <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Scavolini</span>
+                            <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&amp;nbsp;non fosse per le tue tasche?</span>
+                        </h4>
+                        <h4 style="text-align: center;">
+                            <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Scopri il reale valore,&amp;nbsp;</span>
+                            <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">costa meno di quanto pensi.</span>
+                        </h4>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_text_image bg-200 oe_custom_bg pt0 pb0">
+                    <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 pb0 pt0" style="">
+                        <div class="s_btn pt16 pb16 text-center" data-name="Buttons">
+                            <a href="#" class="btn btn-danger" data-original-title="" title="">Prenota una visita per scoprirlo</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_picture bg-200 pt48 pb24">
+                    <div class="container">
+                    <div class="row s_nb_column_fixed">
+                        <div class="col-lg-8 offset-lg-2 pb0">
+                        <figure class="figure">
+                            <img src="/web/image/7940/liberamente%20disegno.jpg" class="figure-img img-fluid rounded img-thumbnail padding-large" alt="Odoo • Un'immagine con didascalia" data-original-title="" title="" aria-describedby="tooltip499044"/>
+                            <figcaption class="figure-caption py-3 text-center">&amp;nbsp;</figcaption>
+                        </figure>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_text_block pt32 pb32">
+                    <div class="container">
+                    <div class="row">
+                        <div class="pt32 pb32 col-lg-12">
+                        <div class="contain clearfix" style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Open Sans&quot;, sans-serif; vertical-align: baseline; position: relative; color: rgb(0, 0, 0);">
+                            <div class="bach-component" data-bach-id="532A9521-D73E-9671-4282-1E7EEA911985" style="margin: 0px auto 6rem; padding: 0px; border: 0px solid rgb(192, 13, 14); font: inherit; vertical-align: baseline; position: relative; max-width: 100%; float: none; width: 1000px; opacity: 1; word-break: break-word;">
+                            <div class="bach-text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; word-break: normal;">
+                                <h4 style="text-align: center; ">
+                                <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Il&amp;nbsp;</span>
+                                <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">reale valore</span>
+                                <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&amp;nbsp;comprende anche i vantaggi connessi agli arredi Scavolini, scoprili tutti parlando con un nostro&amp;nbsp;</span>
+                                <span class="text-tint-0-1" style="border: 0px; color: rgb(200, 42, 43); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">designer</span>
+                                <span style="border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&amp;nbsp;che potrà seguirti dalla progettazione alla messa in opera.</span>
+                                </h4>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="contain clearfix" style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Open Sans&quot;, sans-serif; vertical-align: baseline; position: relative; color: rgb(0, 0, 0);">
+                            <div class="bach-component bach-list" data-bach-id="5DE894C6-2871-41AE-85F9-9E218868B92B" style="margin: 0px auto; padding: 0px 0px 2.5rem; border: 0px solid rgb(192, 13, 14); font: inherit; vertical-align: baseline; position: relative; max-width: 100%; float: none; width: 1000px;">
+                            <div class="bach-desktop-only" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">
+                                <div class="bach-background-container" style="margin: 0px; padding: 0px; border: 0px solid transparent; font: inherit; vertical-align: baseline; position: absolute; inset: 0px; pointer-events: none; z-index: 0; overflow: hidden;"/>
+                            </div>
+                            <div class="bach-list-item" style="margin: 10px 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; display: table;">
+                                <div class="bach-list-item__img" style="margin: 0px; padding: 0px 1rem 0px 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <img class="bach-component bach-image" alt="" width="70" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000058059/08a17f82-6a24-4082-808b-80f683418e83.png" style="max-width: none; font-style: italic; margin: 0px; padding: 0px; border: 0px; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; position: relative;" data-original-title="" title="" aria-describedby="tooltip572220"/>
+                                </div>
+                                <div class="bach-list-item__text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <h4>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Massima trasparenza:&amp;nbsp;</span>
+                                    <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Nessuna sorpresa</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">, tutto incluso: IVA, Trasporto e Montaggio</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">.</span>
+                                </h4>
+                                </div>
+                            </div>
+                            <div class="bach-list-item" style="margin: 10px 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; display: table;">
+                                <div class="bach-list-item__img" style="margin: 0px; padding: 0px 1rem 0px 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <img class="bach-component bach-image" alt="" width="70" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000058059/0c16f461-e341-4764-b4b7-1f59e71b45c6.png" style="max-width: none; font-style: italic; margin: 0px; padding: 0px; border: 0px; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; position: relative;"/>
+                                </div>
+                                <div class="bach-list-item__text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <h4>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Garanzia Hi-five 5 anni:&amp;nbsp;</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Oltre alla garanzia </span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">standard di 2 anni Scavolini ti regala&amp;nbsp;</span>
+                                    <span class="text-tint-0-1" style="border: 0px; color: rgb(200, 42, 43); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">ulteriori 3 anni di garanzia sugli elettrodomestici</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">.</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"> &amp;nbsp;</span>
+                                </h4>
+                                </div>
+                            </div>
+                            <div class="bach-list-item" style="margin: 10px 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; display: table;">
+                                <div class="bach-list-item__img" style="margin: 0px; padding: 0px 1rem 0px 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <img class="bach-component bach-image" alt="" width="70" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000058059/96fa740b-adf8-457b-ae8e-2c85f20705ce.png" style="max-width: none; font-style: italic; margin: 0px; padding: 0px; border: 0px; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; position: relative;"/>
+                                </div>
+                                <div class="bach-list-item__text" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: middle; display: table-cell;">
+                                <h4 style="">
+                                    <b>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Garanzia 10 anni:&amp;nbsp;</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">I nostri&amp;nbsp;</span>
+                                    <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">arredi sono fatti per durare oltre 20 anni.</span>
+                                    </b>
+                                </h4>
+                                </div>
+                            </div>
+                            <div class="bach-list-item" style="margin: 10px 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; display: table;">
+                                <div class="bach-list-item__img" style="margin: 0px; padding: 0px 1rem 0px 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <img class="bach-component bach-image" alt="" width="70" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000058059/a46a9697-a0bb-4533-b9be-e2f2c14bd33d.png" style="max-width: none; font-style: italic; margin: 0px; padding: 0px; border: 0px; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; position: relative;"/>
+                                </div>
+                                <div class="bach-list-item__text" style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: middle; display: table-cell;">
+                                <h4 style="">
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">
+                                    <b>Soluzioni di pagamento</b>
+                                    </span>
+                                    <span style="font-weight: bold; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: 1.5em; line-height: inherit; font-family: inherit; vertical-align: baseline;"/>
+                                    <span style="font-weight: bold; border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">flessibili:&amp;nbsp;</span>
+                                    <span class="text-tint-0-1" style="font-weight: bold; border: 0px; color: rgb(200, 42, 43); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Finanziamenti personalizzati a tasso zero</span>
+                                    <span style="font-weight: inherit; border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">.&amp;nbsp;</span>
+                                </h4>
+                                </div>
+                            </div>
+                            <div class="bach-list-item" style="margin: 10px 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; display: table;">
+                                <div class="bach-list-item__img" style="margin: 0px; padding: 0px 1rem 0px 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <img class="bach-component bach-image" alt="" width="70" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000058059/c7f9e69a-92ca-45f0-bf80-355dc2a3076a.png" style="max-width: none; font-style: italic; margin: 0px; padding: 0px; border: 0px; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; position: relative;"/>
+                                </div>
+                                <div class="bach-list-item__text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <h4>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">60 anni di storia e qualità italiana.</span>
+                                </h4>
+                                </div>
+                            </div>
+                            <div class="bach-list-item" style="margin: 10px 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; display: table;">
+                                <div class="bach-list-item__img" style="margin: 0px; padding: 0px 1rem 0px 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <img class="bach-component bach-image" alt="" width="70" src="https://ac-landing-pages-user-uploads-production.s3.amazonaws.com/0000058059/2d713651-722b-44ec-b825-153efb1b2939.png" style="max-width: none; font-style: italic; margin: 0px; padding: 0px; border: 0px; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; position: relative;"/>
+                                </div>
+                                <div class="bach-list-item__text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: middle; display: table-cell;">
+                                <h4>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">Prendi le misure e&amp;nbsp;</span>
+                                    <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">tocca con mano la tua nuova cucina</span>
+                                    <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&amp;nbsp;nello store più grande delle Marche.</span>
+                                </h4>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="contain clearfix" style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Open Sans&quot;, sans-serif; vertical-align: baseline; position: relative; color: rgb(0, 0, 0);">
+                            <div class="bach-component" data-bach-id="C80F44B6-D036-21E2-0E88-0554A4F00FC6" style="margin: 0px auto 0rem; padding: 0px; border: 0px solid rgb(192, 13, 14); font: inherit; vertical-align: baseline; position: relative; max-width: 100%; float: none; width: 1000px; opacity: 1; word-break: break-word;">
+                            <div class="bach-desktop-only" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">
+                                <div class="bach-background-container" style="margin: 0px; padding: 0px; border: 0px solid transparent; font: inherit; vertical-align: baseline; position: absolute; inset: 0px; pointer-events: none; z-index: 0; overflow: hidden;"/>
+                            </div>
+                            <div class="bach-text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; word-break: normal;">
+                                <h3 style="text-align: center; ">
+                                <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">SOLO UTILIZZANDO&amp;nbsp;</span>
+                                <span class="text-shade-0-0" style="border: 0px; color: rgb(192, 13, 14); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">IL&amp;nbsp;CODICE: SCV1598</span>
+                                <span style="border: 0px; font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">&amp;nbsp;AVRAI AUTOMATICAMENTE DIRITTO </span>
+                                </h3>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="contain clearfix" style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Open Sans&quot;, sans-serif; vertical-align: baseline; position: relative; color: rgb(0, 0, 0);">
+                            <div class="bach-component" data-bach-id="B06F4BFF-B592-AD4A-2D9B-B1F7BB9FAA29" style="margin: 0px auto; padding: 0px; border: 0px solid rgb(192, 13, 14); font: inherit; vertical-align: baseline; position: relative; max-width: 100%; float: none; width: 1000px; opacity: 1; word-break: break-word;">
+                            <div class="bach-desktop-only" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline;">
+                                <div class="bach-background-container" style="margin: 0px; padding: 0px; border: 0px solid transparent; font: inherit; vertical-align: baseline; position: absolute; inset: 0px; pointer-events: none; z-index: 0; overflow: hidden;"/>
+                            </div>
+                            <div class="bach-text" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; position: relative; word-break: normal;">
+                                <h4 style="text-align: center; ">
+                                <span class="text-shade-0-1" style="border: 0px; color: rgb(169, 11, 12); font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;">AGLI ELETTRODOMESTICI o UN FRIGORIFERO LARGO 75cm IN REGALO <br/></span>
+                                <font style="font-size: 18px;">(dettagli della promo presso il punto vendita)</font>
+                                </h4>
+                                <h4 style="text-align: center; ">
+                                <font style="font-size: 18px;">
+                                    <br/>
+                                </font>
+                                <br/>
+                                </h4>
+                                <h4 style="text-align: center; ">
+                                <img class="img-fluid o_we_custom_image" src="/web/image/11501/AN+JE%20rett%20SCAVOLINI%20-%20FEBBRAIO%20SAN%20VALENTINO%20VIDEO.jpg" data-original-title="" title="" aria-describedby="tooltip706068"/>
+                                </h4>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_text_block pt32 pb32 bg-200 oe_custom_bg">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1 pt32 pb0">
+                        <p>
+                            <b>
+                            <font style="color: rgb(169, 11, 12); font-size: 24px;">Ti aspettiamo nello showroom Scavolini più grande delle ...</font>
+                            </b>
+                        </p>
+                        <p>
+                            <b><br/>Per tutelare al massimo tutti noi, l’accesso allo Store è consentito ad un numero limitato di ospiti.&amp;nbsp;&amp;nbsp; </b>
+                        </p>
+                        <p>
+                            <b>Al fine di assicurarti un accesso nel pieno rispetto delle regole anti COVID-19 ti invitiamo a prendere un appuntamento, gratuito e senza alcun impegno per te.</b>
+                        </p>
+                        <p>
+                            <b>Chiamaci subito allo:&amp;nbsp; 071-9880292&amp;nbsp;&amp;nbsp; <br/></b>
+                        </p>
+                        <p>
+                            <b>Comunica telefonicamente il CODICE:&amp;nbsp; &amp;nbsp; <font style="color: rgb(255, 0, 0);">SCV1598</font><br/>&amp;nbsp;</b>
+                        </p>
+                        <p style="text-align: center; ">
+                            <span style="font-weight: bolder;">
+                            <font style="font-size: 18px;">OPPURE compila il form di contatto sotto</font>
+                            </span>
+                            <b>
+                            <br/>
+                            </b>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="container readable o_website_form_builder">
+                    <form accept-charset="UTF-8" action="/website_form/" class="s_website_form col-md-12 mt32" data-model_name="crm.lead" data-force_action="" data-success_page="" enctype="multipart/form-data" method="post">
+                    <div class="o_website_form_fields">
+                        <div class="o_not_editable d-none o_default_snippet_text"> This placeholder prevents its parent from disappearing when emptied </div>
+                        <div class="form-group form-field o_required form-field-char o_has_error css_non_editable_mode_hidden" data-model-field="true" data-optional="false">
+                        <label class="col-form-label" for="name">
+                            <span class="o_default_snippet_text"> Opportunità </span>
+                        </label>
+                        <input name="name" required="required" class="form-control o_website_form_input is-invalid" type="text" value=""/>
+                        </div>
+                        <div class="form-group form-field  form-field-char" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="contact_name">
+                            <span class="o_default_snippet_text"> Nome contatto </span>
+                        </label>
+                        <input name="contact_name" class="form-control o_website_form_input" type="text"/>
+                        </div>
+                        <div class="form-group form-field  form-field-char" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="mobile">
+                            <span class="o_default_snippet_text"> Cellulare </span>
+                        </label>
+                        <input name="mobile" class="form-control o_website_form_input" type="text"/>
+                        </div>
+                        <div class="form-group form-field  form-field-char" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="email_from">
+                            <span class="o_default_snippet_text"> E-mail </span>
+                        </label>
+                        <input name="email_from" class="form-control o_website_form_input" type="text"/>
+                        </div>
+                        <div class="form-group form-field  form-field-char" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="street">
+                            <span> Indirizzo </span>
+                        </label>
+                        <input name="street" class="form-control o_website_form_input" type="text"/>
+                        </div>
+                        <div class="form-group form-field  form-field-many2one css_non_editable_mode_hidden" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="campaign_id">
+                            <span class="o_default_snippet_text">
+                                Campagna
+                            </span>
+                        </label>
+                        <select name="campaign_id" class="form-control custom-select o_website_form_input">
+                            <option/>
+                            <option value="14">
+                                    PROMO OUTLET 2022
+                                </option>
+                            <option value="15">
+                                    AN+JE BLOCCAPREZZO
+                                </option>
+                            <option value="16">
+                                    SA BLOCCAPREZZO
+                                </option>
+                            <option value="17">
+                                    [AN][08]vid coppie-fun - gestione online+extrasconto10 - Modulo
+                                </option>
+                            <option value="5">
+                                    [sa][14] BlackFriday 2021 -50%
+                                </option>
+                            <option value="6">
+                                    [sa][13] SCONTO 10 e Fin Tasso0
+                                </option>
+                            <option value="7">
+                                    [sa][11] promo elettrodom
+                                </option>
+                            <option value="8">
+                                    [SA] [10] [Contatto] sconto 4k 7k
+                                </option>
+                            <option value="9">
+                                    [JESI] 20 - Start Marzo 2022
+                                </option>
+                            <option value="10">
+                                    FRIGO75 in regalo
+                                </option>
+                            <option value="11">
+                                    SuMisura + SCONTO10
+                                </option>
+                            <option value="12" selected="selected">
+                                    SuMisura + EXTRASCONTO10
+                                </option>
+                            <option value="13">
+                                    Vantaggi 4/7k
+                                </option>
+                            <option value="1">
+                                    Vendita
+                                </option>
+                            <option value="2">
+                                    Offerta di Natale
+                                </option>
+                            <option value="3">
+                                    Campagna e-mail - Servizi
+                                </option>
+                            <option value="4">
+                                    Newsletter
+                                </option>
+                        </select>
+                        <p class="form-text text-muted">&amp;nbsp;</p>
+                        </div>
+                        <div class="form-group form-field  form-field-many2one css_non_editable_mode_hidden" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="source_id">
+                            <span class="o_default_snippet_text">
+                                Fonte
+                            </span>
+                        </label>
+                        <select name="source_id" class="form-control custom-select o_website_form_input">
+                            <option/>
+                            <option value="1" selected="selected">
+                                    Motore di ricerca
+                                </option>
+                            <option value="2">
+                                    Newsletter contatto
+                                </option>
+                            <option value="3">
+                                    Newsletter
+                                </option>
+                            <option value="4">
+                                    Facebook
+                                </option>
+                            <option value="5">
+                                    Twitter
+                                </option>
+                            <option value="8">
+                                    Affissioni
+                                </option>
+                            <option value="6">
+                                    Passaggio vetrina
+                                </option>
+                            <option value="7">
+                                    Passaparola
+                                </option>
+                            <option value="9">
+                                    Radio / TV
+                                </option>
+                            <option value="10">
+                                    Maestranze / Architetto
+                                </option>
+                            <option value="11">
+                                    Già cliente Scavolini
+                                </option>
+                            <option value="12">
+                                    Sito / call center Scavolini
+                                </option>
+                            <option value="13">
+                                    Agenzia Krea / Proprietà
+                                </option>
+                            <option value="14">
+                                    Contatto del venditore
+                                </option>
+                            <option value="15">
+                                    BNI
+                                </option>
+                            <option value="16">
+                                    Referral Digital
+                                </option>
+                            <option value="17">
+                                    Facile Ristrutturare
+                                </option>
+                            <option value="18">
+                                    Fiere locali
+                                </option>
+                            <option value="19">
+                                    Instagram
+                                </option>
+                            <option value="20">
+                                    Giornali
+                                </option>
+                            <option value="21">
+                                    conoscenza personale
+                                </option>
+                        </select>
+                        <p class="form-text text-muted">&amp;nbsp;</p>
+                        </div>
+                        <div class="form-group form-field  form-field-many2one css_non_editable_mode_hidden" data-model-field="true" data-optional="true">
+                        <label class="col-form-label" for="medium_id">
+                            <span class="o_default_snippet_text">
+                                Media
+                            </span>
+                        </label>
+                        <select name="medium_id" class="form-control custom-select o_website_form_input">
+                            <option/>
+                            <option value="1">
+                                    Website
+                                </option>
+                            <option value="2">
+                                    Phone
+                                </option>
+                            <option value="3">
+                                    Direct
+                                </option>
+                            <option value="4">
+                                    Email
+                                </option>
+                            <option value="5">
+                                    Banner Ads
+                                </option>
+                            <option value="6">
+                                    Twitter Ads
+                                </option>
+                            <option value="7">
+                                    Facebook Ads
+                                </option>
+                            <option value="8">
+                                    Television
+                                </option>
+                            <option value="9" selected="selected">
+                                    Google Adwords
+                                </option>
+                            <option value="10">
+                                    [sa][14] BlackFriday 2021 -50% [IMG]
+                                </option>
+                            <option value="11">
+                                    [sa][13] SCONTO 10 e Fin Tasso0 [IMG] [cucina pop]
+                                </option>
+                            <option value="12">
+                                    [sa][13] SCONTO 10 e Fin Tasso0 [IMG] [cucina pop] TESTO LUNGO
+                                </option>
+                            <option value="13">
+                                    [sa][11] promo elettrodom [IMG] [cucina scura]
+                                </option>
+                            <option value="14">
+                                    [sa][11] promo elettrodom [IMG] [cucina scura] - Copia
+                                </option>
+                            <option value="15">
+                                    [sa][11] promo elettrodom [IMG] [cucina chiara]
+                                </option>
+                            <option value="16">
+                                    [SA] [10] [Contatto] [BROAD] [IMG Coppia] 4k
+                                </option>
+                            <option value="17">
+                                    [SA] [10] [Contatto] [BROAD] [IMG Coppia] 7k
+                                </option>
+                            <option value="18">
+                                    [AN][08]vid coppie-fun - gestione online+extrasconto10 - Modulo
+                                </option>
+                        </select>
+                        <p class="form-text text-muted">&amp;nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-lg o_website_form_send" data-original-title="" title="" aria-describedby="tooltip493385">
+                            Invia
+                        </button>
+                        <span id="o_website_form_result"/>
+                    </div>
+                    </form>
+                </section>
+                <section class="s_text_image pt32 pb32">
+                    <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 pb16 pt16">
+                        <img class="img-fluid o_we_custom_image" src="/web/image/7936/108_z_anconaok.jpg"/>
+                        </div>
+                        <div class="col-lg-6 pt16 pb16">
+                        <h4>Orari di Apertura</h4>
+                        <p>da Lunedì a Sabato <br/>Mattina: 9.00 - 13.00 <br/>Pomeriggio: 15.30 - 19.30 </p>
+                        <p>Domenica: <br/>Chiuso </p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_text_image pt32 pb32">
+                    <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 pt16 pb16">
+                        <h4>
+                            <font style="color: rgb(192, 13, 14);">Dove Siamo</font>
+                        </h4>
+                        <h6>Via ..., ...</h6>
+                        <h6><span style="text-transform:capitalize;" t-field="website.province" /> &amp;nbsp; <br/><br/></h6>
+                        <h6>E-mail: info@<t t-raw="website.province" />.scavolinistore.net <br/><br/></h6>
+                        <h6>Telefono: ...</h6>
+                        <h6>Se chiami Comunica telefonicamente il CODICE:&amp;nbsp; &amp;nbsp; <font style="color: rgb(192, 13, 14);">SCV1598</font></h6>
+                        <h6>Per riservare la promozione.</h6>
+                        </div>
+                        <div class="col-lg-6 pb16 pt16">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11562.105295147985!2d13.5039468!3d43.5747523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a3034004955647!2sScavolini Store Ancona!5e0!3m2!1sit!2sit!4v1664549839237!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="s_text_image pt32 pb32 bg-200 oe_custom_bg">
+                    <div class="container">
+                    <div class="row align-items-center">
+                        <div class="pt16 pb16 col-lg-2">
+                        <img class="img-fluid o_we_custom_image" src="/web/image/7938/LOGO-SCAVOLINI-STORE-ANCONA---RETTANGOLARE%20(1).jpg"/>
+                        </div>
+                        <div class="pt16 pb16 col-lg-8">
+                        <h2>
+                            <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">P.IVA: 11230860964 -&amp;nbsp; &amp;nbsp; E-mail:</span>
+                            <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">&amp;nbsp;info@<t t-raw="website.province" />.scavolinistore.net&amp;nbsp; &amp;nbsp; Telefono: 071-9880292</span>
+                            <br/>
+                        </h2>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                </div>
         </xpath>
     </template>
 </odoo>
