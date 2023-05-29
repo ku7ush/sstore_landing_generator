@@ -35,7 +35,7 @@
                             </p>
                             <p>
                                 <b>
-                                <font style="color: rgb(169, 11, 12); font-size: 24px;">Ti contatteremo per incontrarci nello showroom Scavolini più grande delle Marche.</font>
+                                <font style="color: rgb(169, 11, 12); font-size: 24px;">Ti contatteremo per incontrarci nello showroom Scavolini più grande delle ...</font>
                                 </b>
                                 <span style="font-weight: bolder;">
                                 <font style="font-size: 18px;">&amp;nbsp;</font>
@@ -91,7 +91,7 @@
                             <div class="pt16 pb16 col-lg-8">
                             <h2>
                                 <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">P.IVA: 11230860964 -&amp;nbsp; &amp;nbsp; E-mail:</span>
-                                <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">&amp;nbsp;info@ancona.scavolinistore.net&amp;nbsp; &amp;nbsp; Telefono: 071-9880292</span>
+                                <span style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; text-align: center;">&amp;nbsp;info@<t t-raw="website.province" />.scavolinistore.net&amp;nbsp; &amp;nbsp; Telefono: 071-9880292</span>
                                 <br/>
                             </h2>
                             </div>
